@@ -1,6 +1,6 @@
 {
   "name": "vue-segmentation-mask",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Vue 3 component for rendering colorized segmentation masks as Canvas overlays.",
   "type": "module",
   "files": [
