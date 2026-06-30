@@ -2,6 +2,11 @@
 
 Vue 3 语义分割掩膜可视化组件。用 Canvas 将掩膜着色后叠加到底图上。
 
+## 链接
+
+- [在线文档](https://zhuhaiyue99.github.io/vue-segmentation-mask/)
+- [在线 Demo](https://zhuhaiyue99.github.io/vue-segmentation-mask/demo/index.html)
+
 ## 使用背景
 
 它适合在 Vue 应用中预览语义分割标签、模型预测结果、标注结果、遥感切片、点云截图以及其他掩膜数据。
