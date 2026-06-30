@@ -1,0 +1,72 @@
+{
+  "name": "vue-segmentation-mask",
+  "version": "0.1.0",
+  "description": "A Vue 3 component for rendering colorized segmentation masks as Canvas overlays.",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "*.css",
+    "dist/style.css"
+  ],
+  "main": "./dist/vue-segmentation-mask.umd.cjs",
+  "module": "./dist/vue-segmentation-mask.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/vue-segmentation-mask.js",
+      "require": "./dist/vue-segmentation-mask.umd.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0",
+    "build": "npm.cmd run build:lib",
+    "clean": "powershell -NoProfile -Command \"if (Test-Path dist) { Remove-Item -Recurse -Force dist }\"",
+    "build:lib": "npm.cmd run clean && vite build --mode lib && vue-tsc -p tsconfig.build.json",
+    "build:demo": "vite build",
+    "pack:check": "npm pack --dry-run",
+    "docs:dev": "docsify serve docs --port 4000",
+    "type-check": "vue-tsc --noEmit",
+    "preview": "vite preview --host 0.0.0.0",
+    "prepublishOnly": "npm.cmd run type-check && npm.cmd run build:lib && npm.cmd run pack:check"
+  },
+  "keywords": [
+    "vue",
+    "vue3",
+    "segmentation",
+    "segmentation-mask",
+    "semantic-segmentation",
+    "image-segmentation",
+    "mask",
+    "mask-overlay",
+    "mask-visualization",
+    "canvas",
+    "annotation",
+    "computer-vision",
+    "remote-sensing"
+  ],
+  "author": "zhuhy",
+  "homepage": "https://github.com/zhuhaiyue99/vue-segmentation-mask",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhuhaiyue99/vue-segmentation-mask.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zhuhaiyue99/vue-segmentation-mask/issues"
+  },
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "docsify-cli": "^4.4.4",
+    "typescript": "~5.6.3",
+    "vite": "^6.0.1",
+    "vue": "^3.5.13",
+    "vue-tsc": "^2.1.10"
+  },
+  "license": "MIT"
+}
